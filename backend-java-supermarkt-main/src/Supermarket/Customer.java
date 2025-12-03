@@ -1,19 +1,22 @@
 package Supermarket;
 
 public class Customer {
-    String name;
-    SuperMarket superMarket;
+    public String name;
+    public SuperMarket superMarket;
 
     public void buyItem (String productName, int amount){
-        if (productName.equals("bread")){
-            superMarket.buyBread(amount);
-        } else if (productName.equals("fruit")){
-            superMarket.buyFruit(amount);
-        } else if (productName.equals("toilet paper")){
-            superMarket.buyToiletPaper(amount);
-        } else {
-            superMarket.buyCheese(amount);
+        for (Product product : superMarket.products){
+            if (product.name.equalsIgnoreCase(productName)){
+                if (product.amount>=amount){
+                    System.out.println("You bought " + amount + " " + productName);
+                } else {
+                    System.out.println("We don't have enough stock of " + productName);
+                }
+                return;
+            }
         }
+
+        System.out.println(superMarket.name + " does not sell " + productName);
     }
 
     public void goToSupermarket (SuperMarket superMarket){

@@ -1,10 +1,10 @@
 package Supermarket;
 
+import java.util.List;
+
 public class SuperMarket {
-    public Product bread;
-    public Product fruit;
-    public Product toiletPaper;
-    public Product cheese;
+    public List<Product> products;
+    public String name;
 
     public void buyItem (Product product, int amount){
         if(amount <= product.amount){
@@ -14,27 +14,20 @@ public class SuperMarket {
         }
     }
 
-    public void buyBread (int amount){
-        buyItem(this.bread, amount);
+    public void restockItem (String productName, int amount){
+        for (Product product : this.products){
+            if (product.name.equalsIgnoreCase(productName)){
+                product.amount = product.amount + amount;
+            }
+            return;
+        }
+
+        System.out.println("You cannot restock " + productName + ", we don't have that in our inventory.");
     }
 
-    public void buyFruit (int amount){
-        buyItem(this.fruit, amount);
-    }
-
-    public void buyToiletPaper (int amount){
-        buyItem(this.toiletPaper, amount);
-    }
-
-    public void buyCheese (int amount){
-        buyItem(this.cheese, amount);
-    }
-
-    public SuperMarket(Product bread, Product fruit, Product toiletPaper, Product cheese) {
-        this.bread = bread;
-        this.fruit = fruit;
-        this.toiletPaper = toiletPaper;
-        this.cheese = cheese;
+    public SuperMarket(List<Product> products, String name) {
+            this.products = products;
+            this.name = name;
         }
 
 
