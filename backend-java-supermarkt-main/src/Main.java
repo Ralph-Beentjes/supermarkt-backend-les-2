@@ -88,7 +88,7 @@ public class Main {
                 System.out.println("- Halbert Eijn");
                 System.out.println("- Dumbo");
                 System.out.println("- Caldi");
-                String superMarketStock = scanner.nextLine();
+                String superMarketStock = scanner.nextLine().toLowerCase();
                 SuperMarket superMarketToRestock = superMarketMap.get(superMarketStock);
                 System.out.println("Which product do you want to restock?");
                 System.out.println("Pick one of the following:");
