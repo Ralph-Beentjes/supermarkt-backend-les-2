@@ -67,7 +67,7 @@ public class Main {
                     SuperMarket superMarket = superMarketMap.get(superMarketChoice);
                     customer.goToSupermarket(superMarket);
                     break;
-                    // Bij het testen van case 2 kan je het beste de break uit case 1 even weghalen en via break 1 doorlopen (anders onthoudt hij de gekozen supermarkt niet)
+                    // Bij het testen van case 2 kan je het beste de break uit case 1 even weghalen en via break 1 doorlopen (anders onthoudt hij de gekozen supermarkt niet bij het testen van de functie in de console)
             case 2: if(customer.superMarket == null) {
                     System.out.println("Pick a supermarket first.");
                     break;}

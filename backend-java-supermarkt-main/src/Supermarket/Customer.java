@@ -26,4 +26,6 @@ public class Customer {
     public Customer(String name){
         this.name = name;
     }
+
+    // stuk tekst zodat ik kan comitten
 }

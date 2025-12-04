@@ -10,4 +10,6 @@ public class Product {
         this.price = price;
         this.amount = amount;
     }
+
+    // stuk tekst zodat ik can comitten
 }

@@ -30,6 +30,6 @@ public class SuperMarket {
             this.name = name;
         }
 
-
+// stuk tekst zodat ik kan comitten
 
 }
