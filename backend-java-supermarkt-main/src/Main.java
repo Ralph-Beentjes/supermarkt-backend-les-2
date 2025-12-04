@@ -59,54 +59,54 @@ public class Main {
 
         switch (choice) {
             case 1: System.out.println("Which supermarket do you want to go to?");
-                    System.out.println("Pick one of the following:");
-                    System.out.println("- Halbert Eijn");
-                    System.out.println("- Dumbo");
-                    System.out.println("- Caldi");
-                    String superMarketChoice = scanner.nextLine().toLowerCase();
-                    SuperMarket superMarket = superMarketMap.get(superMarketChoice);
-                    customer.goToSupermarket(superMarket);
-                    break;
-                    // Bij het testen van case 2 kan je het beste de break uit case 1 even weghalen en via break 1 doorlopen (anders onthoudt hij de gekozen supermarkt niet)
+                System.out.println("Pick one of the following:");
+                System.out.println("- Halbert Eijn");
+                System.out.println("- Dumbo");
+                System.out.println("- Caldi");
+                String superMarketChoice = scanner.nextLine().toLowerCase();
+                SuperMarket superMarket = superMarketMap.get(superMarketChoice);
+                customer.goToSupermarket(superMarket);
+                break;
+            // Bij het testen van case 2 kan je het beste de break uit case 1 even weghalen en via break 1 doorlopen (anders onthoudt hij de gekozen supermarkt niet bij het testen van de functie in de console)
             case 2: if(customer.superMarket == null) {
-                    System.out.println("Pick a supermarket first.");
-                    break;}
-                    System.out.println("Which product do you want to buy from " + customer.superMarket.name + "?");
-                    System.out.println("Pick one of the following:");
-                    System.out.println("0. Bread");
-                    System.out.println("1. Fruit");
-                    System.out.println("2. Toilet Paper");
-                    System.out.println("3. Cheese");
-                    int productChoice = scanner.nextInt();
-                    Product product = customer.superMarket.products.get(productChoice);
-                    System.out.println("How many do you want to add?");
-                    int productAmount = scanner.nextInt();
-                    customer.superMarket.buyItem(product, productAmount);
-                    break;
+                System.out.println("Pick a supermarket first.");
+                break;}
+                System.out.println("Which product do you want to buy from " + customer.superMarket.name + "?");
+                System.out.println("Pick one of the following:");
+                System.out.println("0. Bread");
+                System.out.println("1. Fruit");
+                System.out.println("2. Toilet Paper");
+                System.out.println("3. Cheese");
+                int productChoice = scanner.nextInt();
+                Product product = customer.superMarket.products.get(productChoice);
+                System.out.println("How many do you want to add?");
+                int productAmount = scanner.nextInt();
+                customer.superMarket.buyItem(product, productAmount);
+                break;
             case 3: System.out.println("Which supermarket do you want to restock?");
-                    System.out.println("Pick one of the following:");
-                    System.out.println("- Halbert Eijn");
-                    System.out.println("- Dumbo");
-                    System.out.println("- Caldi");
-                    String superMarketStock = scanner.nextLine();
-                    SuperMarket superMarketToRestock = superMarketMap.get(superMarketStock);
-                    System.out.println("Which product do you want to restock?");
-                    System.out.println("Pick one of the following:");
-                    System.out.println("Bread");
-                    System.out.println("Fruit");
-                    System.out.println("Toilet Paper");
-                    System.out.println("Cheese");
-                    String productToRestock = scanner.nextLine();
-                    System.out.println("How many do you want to add?");
-                    int productAmountRestock = scanner.nextInt();
-                    superMarketToRestock.restockItem(productToRestock, productAmountRestock);
-                    System.out.println("We added " + productAmountRestock + " to the stock of " + productToRestock);
-                    break;
+                System.out.println("Pick one of the following:");
+                System.out.println("- Halbert Eijn");
+                System.out.println("- Dumbo");
+                System.out.println("- Caldi");
+                String superMarketStock = scanner.nextLine();
+                SuperMarket superMarketToRestock = superMarketMap.get(superMarketStock);
+                System.out.println("Which product do you want to restock?");
+                System.out.println("Pick one of the following:");
+                System.out.println("Bread");
+                System.out.println("Fruit");
+                System.out.println("Toilet Paper");
+                System.out.println("Cheese");
+                String productToRestock = scanner.nextLine();
+                System.out.println("How many do you want to add?");
+                int productAmountRestock = scanner.nextInt();
+                superMarketToRestock.restockItem(productToRestock, productAmountRestock);
+                System.out.println("We added " + productAmountRestock + " to the stock of " + productToRestock);
+                break;
             case 4: System.out.println("Goodbye!");
-                    break;
+                break;
             default: System.out.println("Invalid choice.");
-                    break;
-            }
+                break;
         }
-
     }
+
+}

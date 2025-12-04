@@ -26,9 +26,9 @@ public class SuperMarket {
     }
 
     public SuperMarket(List<Product> products, String name) {
-            this.products = products;
-            this.name = name;
-        }
+        this.products = products;
+        this.name = name;
+    }
 
 
 
