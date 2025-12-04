@@ -33,17 +33,17 @@ public class Main {
         products3.add(toiletPaper);
         products3.add(cheese);
 
-        SuperMarket halbertEijn = new SuperMarket(products1, "Halbert Eijn");
+        SuperMarket halbertEijn = new SuperMarket(products1, "halbert eijn");
 
-        SuperMarket dumbo = new SuperMarket(products2, "Dumbo");
+        SuperMarket dumbo = new SuperMarket(products2, "dumbo");
 
-        SuperMarket caldi = new SuperMarket(products3, "Caldi");
+        SuperMarket caldi = new SuperMarket(products3, "caldi");
 
         Map<String, SuperMarket> superMarketMap = new HashMap<>();
 
-        superMarketMap.put("Halbert Eijn", halbertEijn);
-        superMarketMap.put("Dumbo", dumbo);
-        superMarketMap.put("Caldi", caldi);
+        superMarketMap.put("halbert eijn", halbertEijn);
+        superMarketMap.put("dumbo", dumbo);
+        superMarketMap.put("caldi", caldi);
 
         Customer customer = new Customer("Ralph");
 
@@ -63,10 +63,11 @@ public class Main {
                     System.out.println("- Halbert Eijn");
                     System.out.println("- Dumbo");
                     System.out.println("- Caldi");
-                    String superMarketChoice = scanner.nextLine();
+                    String superMarketChoice = scanner.nextLine().toLowerCase();
                     SuperMarket superMarket = superMarketMap.get(superMarketChoice);
                     customer.goToSupermarket(superMarket);
                     break;
+                    // Bij het testen van case 2 kan je het beste de break uit case 1 even weghalen en via break 1 doorlopen (anders onthoudt hij de gekozen supermarkt niet)
             case 2: if(customer.superMarket == null) {
                     System.out.println("Pick a supermarket first.");
                     break;}
