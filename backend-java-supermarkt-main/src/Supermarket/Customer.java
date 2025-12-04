@@ -27,5 +27,5 @@ public class Customer {
         this.name = name;
     }
 
-    // stuk tekst zodat ik kan comitten
+
 }

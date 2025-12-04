@@ -26,10 +26,10 @@ public class SuperMarket {
     }
 
     public SuperMarket(List<Product> products, String name) {
-            this.products = products;
-            this.name = name;
-        }
+        this.products = products;
+        this.name = name;
+    }
 
-// stuk tekst zodat ik kan comitten
+
 
 }

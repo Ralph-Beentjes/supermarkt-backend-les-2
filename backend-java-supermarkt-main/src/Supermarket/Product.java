@@ -11,5 +11,5 @@ public class Product {
         this.amount = amount;
     }
 
-    // stuk tekst zodat ik can comitten
+
 }
